@@ -1,0 +1,9 @@
+#Java specific
+target/
+.classpath
+.project
+.settings
+
+#OS specific
+*.DS_Store
+[Tt]humbs.db
