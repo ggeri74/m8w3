@@ -2,6 +2,7 @@ package trello.cucumberStepDefinition;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.Before;
+import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -24,6 +25,11 @@ public class TrelloStepDefinitions {
     public void before() throws Throwable {
         driver = DriverFactory.getDriver(FIREFOXDRIVER);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    }
+
+    @After
+    public void after() throws Throwable {
+        driver.quit();
     }
 
     @Given("^User is on mentorship page not yet logged in$")
