@@ -36,7 +36,6 @@ public class TrelloStepDefinitions {
     @After
     public void logAfter(Scenario scenario) {
         if (scenario.isFailed()) {
-            driver = DriverFactory.getDriver(FIREFOXDRIVER);
             final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             scenario.embed(screenshot, "image/png");
             logger.info("Scenario ended with FAIL: " + scenario.getName());

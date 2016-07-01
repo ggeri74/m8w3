@@ -7,7 +7,7 @@ Feature: Search Action
 
     Examples:
       | searchString | searchResult |
-      | gergely      | found        |
+      | gergelx      | found        |
       | lorem ipsum  | not found    |
       | blabla       | not found    |
       | glosz        | found        |
